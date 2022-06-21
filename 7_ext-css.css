@@ -1,0 +1,137 @@
+* {   /* Universal selector */
+    color: red;
+    font-family: 'Times New Roman', sans-serif;
+}
+
+p { /* tag selector, all p tags will have these properties */
+    font-size: 3rem;
+}
+
+
+h1 {
+    color: yellow;
+}
+
+#cont { /* ID selector, the tag (single) with this ID will have these properties */
+    background-color: aqua;
+    width: 30rem;
+}
+
+
+.greencol { /* class selector, tags (multiple tags) will have these properties */
+    font-size: 1rem; /* see how it overwrites other font sizes, as it is more specific */
+    color: green;
+}
+
+.underlined {
+    text-decoration: underline;
+}
+
+
+.dotted {
+    text-decoration: dotted;
+}
+
+.greencol.dotted { /* Chained selectors, make sure to overwrite the original selector properties 
+                    Many selectors can be chained, but only one tag selector can be used*/
+    color: blue;
+    font-style: italic;
+}
+
+h1.blue#bold {
+    color: blue;
+    font-weight: bold;
+}
+
+
+/* Instead of:
+.warning {
+    background-color: black;
+    font-size: 4rem;
+    color: red;
+}
+
+.success {
+    background-color: black;
+    font-size: 4rem;
+    color: greenyellow;
+}
+
+You should put:
+*/
+.warning, .success {
+    background-color: black;
+    font-size: 4rem
+}
+.warning {
+    color: red;
+}
+.success {
+    color: greenyellow;
+}
+/* As this is reduces repetition */
+
+
+/* Descendant Combinator */
+.ancestor .contents {  /* See HTMLcode, only tags with class contents that are nested inside the class ancestor are selected */
+    background-color: chartreuse;
+    width: 30rem;
+}
+ /* there is no limit... */
+
+.one .two .three .four .five {
+    text-align: center;
+}
+
+
+#image1 {
+    height: auto; /* if You want to keep proportions */
+    width: 10rem;
+}
+
+
+/* 
+    Cascade of CSS:
+    The more specific CSS declaration gets applied to the tag
+    For example, inline CSS has higher specificity than selectors
+
+    For selectors: 
+        1. ID selectors 
+        2. class selectors (any number)
+        3. type selectors (any number)
+
+    When there are no higher selectors, but more on the same level,
+    the longer chained selectors are chosen
+
+
+*/
+
+/*
+    Inheritance:
+    If we dont explicitly write a rule, the properties are inherited
+    Direct targeting beats inheritance, like so:
+*/
+
+#parent {
+    color: blue;
+}
+
+.child {
+    color: brown;
+}
+
+
+/* 
+    The absolute tie breaker, when deciding on the properties
+    and everything is on the same level Specificity and Inheritance vise, 
+    is the order of declaration.Whichever rule is last defined, wins
+*/
+
+
+h2.alert {
+    color: red;
+}
+
+h2.win {
+    color: yellow;
+}

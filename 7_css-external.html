@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="7_ext-css.css">
+    <title>External CSS</title>
+</head>
+<body>
+    <p>
+        This type of CSS should be the common practice
+    </p>
+
+    <div id="cont">
+        <h1>
+            H1 inside a div
+        </h1>
+    </div>
+
+    <p class="greencol">This p will be green</p>
+
+    <h1 class="greencol">
+        This H1 will be green too
+    </h1>
+
+    <p class="greencol underlined">
+        This p has two classes
+    </p>
+
+    <p class="greencol dotted">
+        This p has two classes too, but the selectors are chained
+    </p>
+
+    <h1 class="blue" id="bold">
+        Example for chaining
+    </h1>
+
+
+    <p class="warning">
+        Warning
+    </p>
+
+    <p class="success">
+        Success
+    </p>
+
+
+    <div class="ancestor">
+        <div class="contents">
+            <div class="contents">
+                <p>
+                    1
+                </p>
+            </div>
+        </div>
+
+        <div class="contents">
+            <p>
+                2
+            </p>
+        </div>
+    </div>
+    <div class="contents">
+        <p>
+            3
+        </p>
+    </div>
+
+    <div class="one">
+        <div class="two">
+            <div class="three">
+                <div class="four">
+                    <div class="five">
+                        <p>
+                            Some text
+                        </p>
+                        <img id="image1" src="ocean1.jpeg" alt="Picture of an ocean">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div style="text-align: center;">
+        <p>
+            Specificity of CSS
+        </p>
+        <img src="css-specificity.png">
+    </div>
+
+    <p>
+        Inheritance
+    </p>
+
+    <div id="parent">
+        <p>Simple inheritance</p>
+    </div>
+    <div id="parent">
+        <p class="child">Direct targeting</p>
+    </div>
+
+
+    <h2 class="alert win" style="background-color: black;">This will be yellow</h2> 
+    <!-- Interestingly, class selectors color property is inherited, even if we give inline style-->
+
+</body>
+</html>
