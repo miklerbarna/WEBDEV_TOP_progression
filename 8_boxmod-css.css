@@ -1,0 +1,47 @@
+#example  * {
+    border: 2px solid red;
+ }
+
+
+ #paddingexample {
+    width: 10rem;
+    padding: 8rem;
+    margin: 0rem;
+    background-color: black;
+ }
+
+ #paddingexample p {
+    margin: 0rem; /* The default margin is gone */
+    background-color: burlywood;
+ }
+
+ #borderexample {
+    width: 30rem;
+    border: 5px dotted purple;
+ }
+
+ .marginexample {
+    margin: 8rem;
+    width: 3rem;
+    text-align: center;
+    background-color: antiquewhite;
+ }
+
+ .borderb {
+    margin: 8rem;
+    width: 180px; /* inspect this, the inside content width will be 140 only */
+    text-align: center;
+    background-color: antiquewhite;
+    border: 20px solid purple;
+    box-sizing: border-box; /* very very very useful!!! */
+ }
+
+
+
+ .inlineexample {
+    margin: 6rem; /*applied only vertically, not horizontally (see there is no margin between the two inline rows)
+    width: 300000000000rem; /*width and height do not apply in inline display*/
+    background-color: aquamarine;
+    text-align: center;
+    display: inline;
+ }

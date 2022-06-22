@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="8_boxmod-css.css">
+    <title>The Box Model</title>
+</head>
+<body>
+    <p>
+        This page focuses on positioning, which uses the box model
+    </p>
+    <div id="example">
+        <h1>Im a box</h1>
+        <p>
+            Basically everything is a box
+        </p>
+        <ul>
+            <li>even lists</li>
+            <li>are boxes</li>
+        </ul>
+        <a href="">And links!</a>
+        <button>Really, everything</button>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <h1>
+        There are three main properties used, Margin, border and padding
+    </h1>
+    <p>
+        Width and height are also important elements of positioning!
+    </p>
+    <img src="css-boxes.png">
+
+    <div id="paddingexample">
+        <p>This is a good example of a high padding, I even added colors to show the box of the p tag</p>
+    </div>
+
+    <p id="borderexample">This is an example of a border, there are many different variations</p>
+
+
+    <p>
+        Below is an example of a margin
+    </p>
+    <div class="marginexample">
+        <h1>1</h1>
+    </div>
+    <div class="marginexample">
+        <h1>2</h1>
+    </div>
+    <div class="marginexample">
+        <h1>3</h1>
+    </div>
+
+    <p>
+        Notice that two margins collapse when they meet 
+        (like between 1 and 2, there is not 16, but only 8rem margin)
+        The largest margin will be applied. Margin also doesnt add up to the sizing of an element.
+        If we give a width to an element, its goig to be the content's width. Padding and border sizes
+        Add up to it. (For example a #paddingexample takes up 18rem even if the widht is 10rem)
+    </p>
+
+    <p>
+        The example below shows a method to incude the size of padding and border into the width/height
+    </p>
+
+   <div class="borderb">
+        <h1>1</h1>
+   </div>
+   <div class="borderb">
+        <h1>2</h1>
+   </div>
+
+   <p>
+        There are two type of displays for boxes
+        <strong>block</strong> and <strong>inline</strong>. Block breaks into a new line,
+        all of the previous elements are an example of this(expect "strong" tag).
+        But inline does not breaks the line, like in the example below
+   </p>
+
+   <h2 class="inlineexample">A</h2>
+   <h2 class="inlineexample">C</h2>
+   <h2 class="inlineexample">B</h2>
+
+   <br>
+
+   <h2 class="inlineexample">A</h2>
+   <h2 class="inlineexample">C</h2>
+   <h2 class="inlineexample">B</h2>
+
+</body>
+</html>
