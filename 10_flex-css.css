@@ -1,5 +1,5 @@
 .flex-container { /* This is a flex container*/
-    width: 50%;
+    width: 700px;
     display: flex; /* If you comment this out, it will simply use block display and puts elements under each other */
 }
 
@@ -7,17 +7,26 @@
     background: peachpuff;
     border: 4px solid brown;
     height: 100px;
-    flex: 1;
+    flex: 1; /* this is a shorthand to flex 1 1 0% */
 }
 
-/* .one {
-    flex: 2;
+.flex-container .twobig {
+    flex-grow: 5;
 }
 
-.two {
-    flex: 4;
+.flex-container_toshrink {
+    display: flex;
+    width: 700px;
 }
 
-.three {
-    flex: 8;
-} */
+.flex-container_toshrink div {
+    background: peachpuff;
+    border: 4px solid brown;
+    height: 100px;
+    width: 400px; /*the three elements width added up is more than 700px, so they automatically shrink */
+    flex: 1 1 auto; /* here we have to specify the flex-basis to auto, to make shrink work*/
+}
+
+.flex-container_toshrink .twosmall {
+    flex-shrink: 0; /* at 0: does not shrink, stays at 400px, at 1: shrinks the same as the other default elements, at 1+: it shrinks more than the default elements*/
+}
