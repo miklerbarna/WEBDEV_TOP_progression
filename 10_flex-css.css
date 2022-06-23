@@ -1,0 +1,23 @@
+.flex-container { /* This is a flex container*/
+    width: 50%;
+    display: flex; /* If you comment this out, it will simply use block display and puts elements under each other */
+}
+
+.flex-container div { /* these are flex items*/
+    background: peachpuff;
+    border: 4px solid brown;
+    height: 100px;
+    flex: 1;
+}
+
+/* .one {
+    flex: 2;
+}
+
+.two {
+    flex: 4;
+}
+
+.three {
+    flex: 8;
+} */
