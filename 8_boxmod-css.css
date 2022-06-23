@@ -36,12 +36,47 @@
     box-sizing: border-box; /* very very very useful!!! */
  }
 
+#borderfree {
+   width: 10rem;
+   border-top-width: 20px;
+   border-top-color: blue;
+   border-top-style: dashed;
+   border-left-width: 2px;
+   border-left-color: black;
+   border-left-style: solid;
+   border-right-width: 5px;
+   border-right-color: red;
+   border-right-style: dotted;
+   border-bottom-width: 15px;
+   border-bottom-color: yellowgreen;
+   border-bottom-style: groove;
 
+}
+
+
+#exp {
+   text-align: center;
+   width: auto; /* This is the same as if i didnt define it (in this context) */
+   margin: 20px 40px 80px 160px; /*margin: top right bottom left*/
+   /*margin: 0px 20px;*/   /*its the same as margin: 0px 20px 0px 20px*/
+   border: 3px solid red;
+}
 
  .inlineexample {
     margin: 6rem; /*applied only vertically, not horizontally (see there is no margin between the two inline rows)
     width: 300000000000rem; /*width and height do not apply in inline display*/
+    /*(the display: inline-block behaves like an inline display, but also applies the horizontal margin)*/
     background-color: aquamarine;
     text-align: center;
-    display: inline;
+    display: inline; /*try inline-block and block as well*/
+ }
+
+ .inlineblock {
+   background-color: burlywood;
+   border: 3px solid gray;
+   font-size: 2rem;
+   text-align: center;
+   padding: 30px 50px;
+   /* Try this! margin: -2px; */
+   display: inline-block; /* Try deleting this, it will become an inline element by default */
  }
