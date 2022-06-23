@@ -61,22 +61,3 @@
    /*margin: 0px 20px;*/   /*its the same as margin: 0px 20px 0px 20px*/
    border: 3px solid red;
 }
-
- .inlineexample {
-    margin: 6rem; /*applied only vertically, not horizontally (see there is no margin between the two inline rows)
-    width: 300000000000rem; /*width and height do not apply in inline display*/
-    /*(the display: inline-block behaves like an inline display, but also applies the horizontal margin)*/
-    background-color: aquamarine;
-    text-align: center;
-    display: inline; /*try inline-block and block as well*/
- }
-
- .inlineblock {
-   background-color: burlywood;
-   border: 3px solid gray;
-   font-size: 2rem;
-   text-align: center;
-   padding: 30px 50px;
-   /* Try this! margin: -2px; */
-   display: inline-block; /* Try deleting this, it will become an inline element by default */
- }

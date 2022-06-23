@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="9_disp-css.css">
+    <title>Display</title>
+</head>
+<body>
+
+    <p>
+        We will go more in depth with display types here
+    </p>
+
+    <p>
+        There are two type of displays for boxes
+        <strong>block</strong> and <strong>inline</strong>. Block breaks into a new line,
+        most of the previously learnt elements are an example of this(expect "strong" tag).
+   </p>
+
+   <p style="border: 3px solid red;">Like</p>
+   <p style="border: 3px solid red;">These</p>
+   <p style="border: 3px solid red;">paragraphs</p>
+
+   <p>
+        But inline tags do not break the line, <a href="">like here</a>, 
+        or like in the example below
+   </p>
+   <h2 class="inlineexample">A</h2>
+   <h2 class="inlineexample">C</h2>
+   <h2 class="inlineexample">B</h2>
+
+   <br>
+
+   <h2 class="inlineexample">A</h2>
+   <h2 class="inlineexample">C</h2>
+   <h2 class="inlineexample">B</h2>
+
+   <p>
+        More information is in the CSS file's comments.
+        Span is an inline element and Div is a block element.
+        They are used for the same thing, but on different displays.
+        <span style="background-color:yellow;">This is an example of a span</span>. Pretty useful.
+   </p>
+
+   <p>
+        Between the two displays is <em>inline-block</em>, Where we want top and bottom margin, 
+        but more elements in a same line like so: 
+   </p>
+
+   <a href="#" class="inlineblock">One link</a>
+   <a href="#" class="inlineblock">One more</a>
+
+   <h1>Play around with the display of the span element</h1>
+   <div style="width: 400px; border: 2px solid black">
+       <p>
+           I am a paragraph and this is a <span>span</span> inside that paragraph. 
+           A span is an inline element and so does not respect width and height.
+       </p> 
+   </div>
+
+   <br>
+    <a href="8_boxmodel.html">To the previous page</a>
+    <a href="">To the next page</a>
+</body>
+</html>
