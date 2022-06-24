@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="11_flex-axis-css.css ">
+    <title>Flexbox Axis</title>
+</head>
+<body>
+
+    <p>
+        Flexboxes can work vertically or horizontally. Flexboxes always have two axes:
+        The <strong>main axis</strong> and the <strong>cross axis</strong>.
+        flex-direction: row; (the default) puts the main axis horizontal and the cross axis vertical 
+    </p>
+    <img src="axes.png">
+    <p>
+        In the first example below, we put display: flex (which is the same as flex-direction: row;) 
+        on a div and it arranged its children horizontally. 
+        Try changing it to flex-direction: column; it will arrange the children vertically.
+    </p>
+
+
+    <div class="parent">
+        <div class="child">Lorem icia aut! Impedit sit sunt quaerat, odit,
+            tenetur error, harum nesciunt ipsum debi</div>
+        <div class="child">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+            molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+            numquam blanditiis harum ut! Impedit sit sunt quaerat, odit,
+            tenetur error, harum nesciunt ipsum debi</div>
+        <div class="child">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+            molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+            numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+            optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
+            obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam
+            nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit,
+            tenetur error, harum nesciunt ipsum debi</div>
+        <div class="child">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+            molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+            numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+            optio, eaque rerum.</div>
+    </div>
+
+
+    <p>
+        In the second example below flex-grow: 0; is applied. Here we can try out 
+        <strong style="font-size:30px;"> Alignments</strong>
+        On the parent div, try justify-content: center; justify-content: start; (the default)
+        justify-content: end; justify-content: space-evenly; This tells the container, how its children
+        should be placed on the main axis <strong>if there is available space</strong> 
+        (Hence the flex-grow: 0; property)
+    </p>
+
+    <p>
+        To manipulate flex items on the cross axis, 
+        we use the align-items property in the flex container
+        Try align-items: stretch;(default), align-items: flex-start; align-items: center;
+        align-items: flex-end; align-items: baseline;(The first line of text for all
+        items will align on the same baseline.) 
+    </p>
+
+    <div class="parent2">
+        <div class="child2">Lorem icia aut! Impedit sit sunt quaerat, odit,
+            tenetur error, harum nesciunt ipsum debi</div>
+        <div class="child2">Lorem Impedit sit sunt quaerat, odit,
+            tenetur error, harum nesciunt ipsum debi</div>
+        <div class="child2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+            molestrumfficia aut! Impedit sit sunt quaerat, odit,
+            tenetur error, harum nesciunt ipsum debi</div>
+        <div class="child2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+            molestiae quas vel sint am eius sed odit fugiat iusto fuga praesentium
+            optio, eaque rerum.</div>
+    </div>
+    <p>
+        When we declare flex-direction: column, the parent is
+        a column, and the children become rows.
+        This also changes the main- and cross-axis, meaning
+        align-items now works horizontally, and justifycontent now works vertically.
+        Try it out on the example below
+    </p>
+
+    <div class="parent3">
+        <div class="child3">Lorem icia aut! Impedit sit sunt quaerat, odit,
+            tenetur error, harum nesciunt ipsum debi</div>
+        <div class="child3">Lorem Impedit sit sunt quaerat, odit,
+            tenetur error, harum nesciunt ipsum debi</div>
+        <div class="child3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+            molestrumfficia aut! Impedit sit sunt quaerat, odit,
+            tenetur error, harum nesciunt ipsum debi</div>
+        <div class="child3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+            molestiae quas vel sint am eius sed odit fugiat iusto fuga praesentium
+            optio, eaque rerum.</div>
+    </div>
+</body>
+</html>
