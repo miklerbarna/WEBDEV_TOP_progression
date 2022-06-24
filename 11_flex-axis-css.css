@@ -24,6 +24,7 @@ body {
     border: 3px solid brown;
     background-color: aqua;
     display: flex;
+    flex-direction: row; /*default*/
     justify-content: start; /*default*/
     align-items: stretch; /*default*/
     gap: 2rem;
@@ -39,12 +40,14 @@ body {
     padding: 30px;
     border: 3px solid burlywood;
     background-color: aqua;
+    display: flex;
     flex-direction: column;
+    justify-content: start; /*default*/
+    align-items: stretch; /*default*/
     gap: 2rem;
 }
 
 .child3 {
-    /* flex: 0 1 0%; */
-    flex-basis: 100%;
+    flex: 0 1 0%;
     background-color: white;
 }

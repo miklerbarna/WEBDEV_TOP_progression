@@ -1,6 +1,7 @@
 .flex-container { /* This is a flex container*/
     width: 700px;
     display: flex; /* If you comment this out, it will simply use block display and puts elements under each other */
+    /* when applied, the default values are flex-grow: 1; flex-shrink: 0; flex-basis: auto; */
 }
 
 .flex-container div { /* these are flex items*/
