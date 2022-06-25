@@ -1,0 +1,19 @@
+.odd {
+    background-color:rgb(255, 192, 203);
+    font-family: Verdana, "DejaVu Sans", sans-serif;
+}
+
+.big {
+    font-size: 24px;
+}
+
+#divone {
+    color: #0000ff;
+    font-size: 36px;
+}
+
+#divtwo {
+    background-color: hsl(120, 73%, 75%);
+    font-size: 24px;
+    font-weight: bold;
+}
