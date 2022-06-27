@@ -10,21 +10,43 @@ body {
   height: 72px;
   background: darkmagenta;
   color: white;
+  font-size: 32px;
+  font-weight: 900;
   display: flex;
-  justify-content: center;
   align-items: center;
+  padding-left: 16px;
 }
 
 .footer {
   height: 72px;
   background: #eee;
   color: darkmagenta;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .sidebar {
   width: 300px;
   background: royalblue;
   flex-shrink: 0;
+  padding: 16px;
+}
+
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+li {
+  margin-bottom: 16px;
+}
+
+.sidebar a {
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
 }
 
 .card {
@@ -39,15 +61,13 @@ body {
 }
 
 .flashcards {
-  margin: 20px;
+  padding: 32px;
   display: flex;
-  gap: 16px;
+  flex-wrap: wrap;
 }
 
 .card {
   padding: 16px;
-  display: flex;
-  height: 4 00px;
-  width: 200px;
-  flex-wrap: wrap;
+  margin: 16px;
+  width: 300px;
 }
