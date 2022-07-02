@@ -98,3 +98,43 @@ multiple lines and
         tabs are
             included`;
 console.log(multiline);
+
+//String methods
+let str = "almafa"
+console.log(str.length);
+console.log(str.slice(2,4)); //(from,to)
+console.log(str.slice(4)); //(from this index)
+console.log(str.substr(2,4)); //(from,length of substring)
+console.log(str.substring(2,4)); //(from,to)
+
+let newstr = str.replace("alma","Szilva");
+console.log(newstr);
+console.log(newstr.toUpperCase());
+console.log(newstr.toLowerCase());
+
+let text3 = str.concat(" ",newstr.toLowerCase());
+console.log(text3);
+
+let trimtext = "             hello          ";
+console.log(trimtext);
+console.log(trimtext.trim());
+
+
+console.log(str.charAt(4));
+console.log(trimtext.trim().charAt(1)); //join together,trim first then charAt method
+//or simply..
+console.log(str[4]); //property access, ITS READ ONLY
+str[4] = 'r';
+console.log(str[4]); //It is not changed to rs
+
+let stringarray = str.split(""); //Now its an array of characters
+console.log(stringarray[2]);
+stringarray[2] = 'r'; //So now it can be WRITE as well
+console.log(stringarray[2]);
+console.log(stringarray.length); //length works on arrays as well
+
+let text4 = "A quick red fox jumped over the lazy browm dog";
+let sentencearray = text4.split(" "); //now sentencearray is an array that contains strings
+for (i = 0; i < sentencearray.length; i++){ //small little for loop
+    console.log(sentencearray[i]);
+}
