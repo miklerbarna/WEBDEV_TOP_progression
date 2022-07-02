@@ -1,13 +1,6 @@
-body{
-    box-sizing: border-box;
-    line-height: 1.6;
+body {
+    margin: 0px;
 }
-
-::before, ::after {
-    box-sizing: inherit;
-    line-height: inherit;
-}
-
 
 #hero {
     background-color:#1F2937 ;
@@ -40,33 +33,169 @@ body{
 #herobottom {
     display: flex;
     padding: 12px 200px;
+    display: flex;
+    justify-content: center;
+    gap: 7rem;
 }
 
 #herocontent {
     padding: 20px;
     width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 #heromaintitle {
     color: #F9FAF8;
     font-size: 48px;
+    font-weight: bolder;
+    padding: 0px;
+    margin: 0px;
 }
 
 #herocontent p {
     font-size: 18px;
     color: #E5E7EB;
+    padding: 0px;
+    margin: 0px;
 }
 
 #herosignup {
+    margin-top: 16px;
     background-color: #3882F6;
     font-size: 18px;
     color: #E5E7EB;
-    padding: 20px 30px;
+    padding: 8px 16px;
     border-radius: 12px;
+    width: 120px;
 }
 
 #heroimage {
     width: 300px;
     height: 200px;
     background-color: gray;
+}
+
+#heroimage img {
+    height: auto;
+    width: 400px;
+}
+
+
+
+#information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+#information h1 {
+    font-size: 36px;
+    font-weight: bolder;
+    color: #1f2937;
+}
+
+#flashcards {
+    display: flex;
+    gap: 2rem;
+}
+
+.card {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card img {
+    margin: 0px;
+    height: 150px;
+    width: auto;
+    outline: 3px solid blue;
+    border-radius: 6px;
+}
+
+
+#quotediv {
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #E5E7EB;
+}
+
+#quote {
+    width: 900px;
+    padding: 30px;
+}
+
+#quote p:nth-child(1) {
+    align-self: flex-start;
+    flex-wrap: wrap;
+    font-size: 26px;
+    font-style: italic;
+    font-weight: lighter;
+}
+
+#quote p:nth-child(2) {
+    font-size: 26px;
+    text-align: end;
+    font-weight: bolder;
+}
+
+#callto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+#calltoblue {
+    background-color: #3882F6;
+    border-radius: 6px;
+    width: 900px;
+    height: 60px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18rem;
+}
+
+#calltoblue div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#calltoblue p:nth-child(1) {
+    color: #E5E7EB;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0px;
+}
+
+#calltoblue p:nth-child(2) {
+    margin: 0px;
+    color: #E5E7EB;
+}
+
+#calltoblue button {
+    background-color: #3882F6;
+    color: #E5E7EB;
+    border: 3px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 5px 20px;
+}
+
+footer {
+    background-color: #1F2937;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    color: #E5E7EB;
 }
