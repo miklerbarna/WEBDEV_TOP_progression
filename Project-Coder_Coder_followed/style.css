@@ -1,4 +1,4 @@
-:root {
+:root {  /*CSS variables*/
     --white: #fff;
     --cyan: hsl(179, 62%, 40%);
     --ltcyan: hsl(179, 62%, 45%);

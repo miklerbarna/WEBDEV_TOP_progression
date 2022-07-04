@@ -1,0 +1,111 @@
+html{
+    box-sizing: border-box;
+    font-size: 100%; /* for rem */
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: inherit ;
+}
+
+
+.container {
+    background-color: aqua;
+    min-height: 10rem; /*minimize your window, and try min-height*/
+}
+
+
+.green, .opgreen {
+    height: 4rem;
+    width: 20rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+}
+
+.opgreen {
+    opacity: 0.5;
+}
+
+.shadowb {
+    background-color: yellow;
+    height: 4rem;
+    width: 20rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    color: red;
+    /*box-shadow: offset-x | offset-y | blur-radius | spread-radius | color */ 
+    box-shadow: 1.5rem 1.5rem 0.5rem 0rem currentColor;
+    /*offset-x and offset-y tells the position of the shadow*/
+    /* blur-radius: the blur fades from solid color to the end of the blur in that value, so here in 0.5rem it goes from black to the end pf the blur, can't be negative*/
+    /*spread-radius: how far we go out BEFORE the blur starts, can be negative*/
+    /*color: default matches the color of the box (not in Safari...) USE currentColor*/
+}
+
+.shadowb2 {
+    background-color: yellow;
+    height: 4rem;
+    width: 20rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 7rem;
+    color: red;
+    box-shadow: inset 0 0 0.5rem 0.3rem currentColor;
+    /*inset: the shadow will be inside the box */
+}
+
+.shadowb3 {
+    background-color: yellow;
+    height: 4rem;
+    width: 20rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 7rem;
+    box-shadow: 1rem 1rem 0.5rem 0 red, /*the order matters, they hide each other*/
+                1rem 1rem 0.5rem 1rem blue, 
+                1rem 1rem 0.5rem 2rem yellow,
+                inset 0 0 0.5rem 0.3rem rebeccapurple;
+}
+
+
+/*transition: transition-property | transition-duration |  */
+/* transition property: what property to change*/
+.transition > div {
+    height: 4rem;
+    width: 10rem;
+    background-color: rgb(46, 117, 130);
+    border: 3px solid currentColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.transition div:nth-child(1):hover {
+    width: 20rem;
+    transition: width 400ms ease;
+}
+
+.transition div:nth-child(2):hover {
+    background-color: azure;
+    transition: background-color 500ms ease;
+}
+
+.transition div:nth-child(3):hover {
+    transform: rotate(45deg);
+    background-color: blueviolet;
+    transition: 1000ms ease; /*Both happen at the same time!*/
+}
