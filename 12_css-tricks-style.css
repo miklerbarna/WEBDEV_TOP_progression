@@ -82,8 +82,17 @@ body {
 }
 
 
-/*transition: transition-property | transition-duration |  */
+/*transition: transition-property | transition-duration |  transition-timing-function | transition-delay*/
 /* transition property: what property to change*/
+/* transition-duration: How long the transition is*/
+/* transition-timing-function: tells the speed curve of the transition
+    linear: linear speed
+    ease: slow start, fast middle, slow end (the default)
+    ease-in: slow start, fast end
+    ease-out: fast start, slow end
+    ease-in-out: slow start, slow end
+   transition-delay: How long until the transition starts
+*/
 .transition > div {
     height: 4rem;
     width: 10rem;
@@ -92,6 +101,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 1000ms ease;
 }
 
 .transition div:nth-child(1):hover {
@@ -107,5 +117,15 @@ body {
 .transition div:nth-child(3):hover {
     transform: rotate(45deg);
     background-color: blueviolet;
-    transition: 1000ms ease; /*Both happen at the same time!*/
+    transition: 1000ms ease 1000ms; /*Both happen at the same time!*/
+}
+
+/* They can be stacked */
+.transition div:nth-child(4):hover {
+    width: 20rem;
+    height: 8rem;
+    background-color: chartreuse;
+    transition: width 1000ms ease,
+                height 1000ms ease 700ms,
+                background-color 500ms ease 2000ms;
 }
