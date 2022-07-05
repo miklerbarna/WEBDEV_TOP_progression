@@ -119,6 +119,16 @@ let trimtext = "             hello          ";
 console.log(trimtext);
 console.log(trimtext.trim());
 
+//padStart: fills the string's start with the argument string until length reached
+//padEnd: fills the string's end with the argument string until length reached
+let txt = "4";
+let padded = txt.padStart(4,"x"); //(the desired length | the filling character)
+console.log(padded);
+let paddedb = padded.padEnd(7,"x");
+console.log(paddedb);
+
+
+
 
 console.log(str.charAt(4));
 console.log(trimtext.trim().charAt(1)); //join together,trim first then charAt method
@@ -138,3 +148,94 @@ let sentencearray = text4.split(" "); //now sentencearray is an array that conta
 for (i = 0; i < sentencearray.length; i++){ //small little for loop
     console.log(sentencearray[i]);
 }
+
+//Basic types:
+
+//Number: Both integers and floating points
+let n = 123;
+let n2 = 34.3;
+//Special numbers: NaN, Infinity
+let inf = Infinity;
+let nan = NaN;
+console.log(inf);
+console.log(nan);
+
+//String
+let s = "Hello";
+let str2 = 'Single quotes are ok too';
+let phrase = `can embed another ${s}`;
+
+//Boolean
+let bv = true;
+let bv2 = 1 > 2;
+
+//null
+let sm = null;
+
+//undefined: not the same as null
+let mes;
+console.log(mes);
+let m = 23;
+m = undefined;
+console.log(m);
+
+
+//Objects....more later
+
+//Conditionals
+//All comparison operators return a boolean value
+
+console.log( 2 > 1 ); 
+console.log( 2 < 1 ); 
+console.log( 2 <= 1 ); 
+console.log( 2 >= 1 ); 
+console.log( 2 == 1 ); 
+console.log( 2 != 1 );
+
+//comparison of different types:
+//When comparing values of different types, JavaScript converts the values to numbers.
+console.log("comparing a number and a string:");
+console.log(3 > '5' );
+console.log ('01' == 1);
+
+//For boolean values, true becomes 1 and false becomes 0.
+console.log(true == '001');
+console.log(false == 0);
+
+
+//regular == can't diffrentiate between 0 and false
+console.log(0 == false); //true
+//and
+console.log('' == false); //true
+
+//if we want to differentiate between them, we have to use ===
+// === checks the equality without the type conversion
+console.log(0 === false); //false
+
+//strange comparisons:
+console.log( null === undefined ); // false
+console.log( null == undefined ); // true
+console.log( null > 0 );  // (1) false
+console.log( null == 0 ); // (2) false
+console.log( null >= 0 ); // (3) true
+//The value undefined shouldn’t be compared to other values:
+
+
+//Conditional Statements
+if ( 2 < 3)
+{
+    console.log("Math is real");
+}
+else if ( 2 <= 3)
+{
+    console.log("Math is somewhat real");
+}
+else
+{
+    console.log("Nothing is real...");
+}
+
+//Logical operators: 
+//OR: ||
+// AND: &&  (left to right evaluation)
+//NOT: !
