@@ -239,3 +239,28 @@ else
 //OR: ||
 // AND: &&  (left to right evaluation)
 //NOT: !
+
+//Switches
+
+let answer = prompt("What did you eat?");
+
+switch (answer)
+{
+    case 'apple':
+        console.log("apples are great");
+        break;
+    case 'banana':
+        console.log("Not my favourites");
+        break;
+    case 'nothing':
+        console.log("You gotta eat");
+        break;
+    case '':
+        console.log("Give an answer damnit..");
+        break;
+    default:
+        console.log("im sorry...WHAT");
+        break;
+}
+
+
