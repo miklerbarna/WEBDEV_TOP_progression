@@ -242,6 +242,7 @@ else
 
 //Switches
 
+/*
 let answer = prompt("What did you eat?");
 
 switch (answer)
@@ -262,5 +263,6 @@ switch (answer)
         console.log("im sorry...WHAT");
         break;
 }
+*/
 
 
