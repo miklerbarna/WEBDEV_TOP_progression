@@ -161,6 +161,7 @@ console.log(inf);
 console.log(nan);
 
 //String
+//Strings are immutable, you can't change a char in it (You can use .replace() and make a new string)
 let s = "Hello";
 let str2 = 'Single quotes are ok too';
 let phrase = `can embed another ${s}`;
