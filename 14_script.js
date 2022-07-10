@@ -213,3 +213,53 @@ let ask = (con,yes,no) =>
 ask('U good JS?', () =>  alert("You agreed."), () => alert("You canceled the execution."));
 
 */
+
+
+function the_func()
+{
+    let x = prompt('Enter a number');
+    printer(x);
+}
+
+
+function fizzbuzz()
+{
+    console.log('FizzBuzz');
+}
+
+function fizz()
+{
+    console.log('Fizz');
+}
+
+function buzz()
+{
+    console.log('Buzz');
+}
+
+function printer(x)
+{
+    for (i = 1; i <= x; i++)
+    {
+        if (i % 3 == 0)
+        {
+            if (i % 5 == 0)
+            {
+                fizzbuzz();
+            }
+            else
+            {
+                fizz();
+            }
+        }
+        else if (i & 5 == 0)
+        {
+            buzz()
+        }
+        else console.log(i);
+    }
+}
+
+// the_func();
+
+
