@@ -16,11 +16,6 @@ function playerchoose()
     }
 }
 
-function computerPlay()
-{
-    return options[(Math.round(10 * Math.random())) % 3];
-}
-
 
 function evaluate(player_option, computer_option)
 {
@@ -86,12 +81,26 @@ function game()
         alert('This value does not exist');
         return;
     }
-    let computer_option = computerPlay();
-    evaluate(player_option, computer_option);
+    let computer_option = function(){
+        return options[(Math.round(10 * Math.random())) % 3];
+    };
+    evaluate(player_option, computer_option());
 }
 
+function exit()
+{
+    let ans = prompt('Exit game?','yes or no');
+    if (ans == 'yes')
+    {
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+}
 
-while (true)
+while (exit())
 {
     game();
     alert(`Your score: ${myscore}\nComputers score: ${compscore}`);
