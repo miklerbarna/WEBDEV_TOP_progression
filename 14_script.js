@@ -20,8 +20,19 @@ function replaceCharAt(str, index, replacement)
     return str.slice(0,index) + replacement + str.slice(index+1);
 }
 
+*/
+//Arrays contain Objects
+let arrObjs = ["hello", 12, true];
+console.log(arrObjs[0]);
+
+//adding elements with push
+arrObjs.push(2.3);
+console.log(arrObjs[3]);
 
 
+
+/*
+//initialiasation
 let intArray = [];
 
 for (i = 0; i < 10; i++)
