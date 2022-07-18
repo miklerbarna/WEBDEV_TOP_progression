@@ -18,9 +18,13 @@ const caesar = function(str,shift)
 const shifter = function(c,shift) {
     
     let code = c.charCodeAt(0);
-    if ((code >= 65 && code <= 90) || (code >=97 && code <= 122))
+    if ((code >= 65 && code <= 90))
     {
         return String.fromCharCode((code + shift - 65) % 26 + 65);   //one is 65 other is 97 !!!!!!!!!!!!!!!
+    }
+    else if (code >=97 && code <= 122)
+    {
+        return String.fromCharCode((code + shift - 97) % 26 + 97);   //one is 65 other is 97 !!!!!!!!!!!!!!!
     }
     else
     {
