@@ -36,29 +36,69 @@
     ];
     
     // Array.prototype.filter()
+    //filter returns the elements which test true for the condition
     // 1. Filter the list of inventors for those who were born in the 1500's
 
+    const people_born_1500s = inventors.filter(inventor => {return (inventor.year >= 1500 && inventor.year < 1600);});
+    // console.table(people_born_1500s);
+
+
     // Array.prototype.map()
+    //map does something with each element
     // 2. Give us an array of the inventors first and last names
+    const inventor_names = inventors.map(inventor => inventor.first + ' ' + inventor.last);
+    // console.log(inventor_names);
 
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
+    const sorted = inventors.sort( (a, b) => a.year > b.year ? 1 : -1);
 
-    // Array.prototype.reduce()
+    // console.table(sorted);
+    // Array.prototype.reduce(function(currentsum, current),base_forsum);
     // 4. How many years did all the inventors live all together?
 
+    const base = 0;
+    const sumyears = inventors.reduce(((total, current) => total + (current.passed - current.year)), 0);
+    // console.log(sumyears); 
+
+
     // 5. Sort the inventors by years lived
+    const byYears = inventors.sort((a , b) => (a.passed - a.year) > (b.passed - b.year) ? -1 : 1);
+
+    console.table(byYears);
 
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
     // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
 
+    // const category = document.querySelector('.mw-category');
+    // const links = Array.from(category.querySelectorAll('a'));
+    // const de = links
+    //               .map(element => element.textContent)
+    //               .filter(element => element.includes('de'));
+    
 
     // 7. sort Exercise
     // Sort the people alphabetically by last name
 
+    const sorted_bylastname = people.sort((a, b) => {
+      const [a_first, a_last] = a.split(',');
+      const [b_first, b_last] = b.split(',');
+      return (a_first > b_first) ? 1 : -1;  
+    })
+
+    // console.log(sorted_bylastname);
+
     // 8. Reduce Exercise
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+
+    const instances = data.reduce((obj, item) => {
+      if (!obj[item]) obj[item] = 0;
+      obj[item]++;
+      return obj;
+    }, { /*objects like car,truck,walk,van,bike */});
+
+    console.log(instances);
 
   </script>
 </body>
