@@ -81,7 +81,9 @@ h2 {
 }
 
 
-.clear {
+.clear,
+.check-all,
+.uncheck-all {
   margin-top: 1.3rem;
   width: 100%;
   border: 1px solid rgba(0, 0, 0, 0.3);
