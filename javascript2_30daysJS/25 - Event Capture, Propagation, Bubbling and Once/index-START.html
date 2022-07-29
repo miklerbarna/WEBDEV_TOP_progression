@@ -39,9 +39,26 @@
     background: coral;
   }
 </style>
-
-<button></button>
+<button>Click me</button>
 <script>
+    const divs = document.querySelectorAll('div');
+    const button = document.querySelector('button');
+
+    function logText(e)
+    {
+      console.log(this.classList.value);
+      // e.stopPropagation(); //will stop the event from bubbling up
+    }
+
+
+    divs.forEach(div => div.addEventListener('click', logText, {
+      capture: false, //switch it to true
+      once: false //only selected once if true
+    }));
+
+    button.addEventListener('click', () => console.log('Clicked!!'),{
+      once: true
+    })
 
 </script>
 </body>
