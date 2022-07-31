@@ -1,6 +1,7 @@
 const grid_layout = document.querySelector('#grid_layout');
 const grid_range = document.querySelector('[type="range"]');
 const grid_range_value = document.querySelector('.grid_range_value');
+const color = document.querySelector('.color');
 let grid_items = [];
 let isDown = false;
 
@@ -58,7 +59,12 @@ function handleMove()
     }
 }
 
+function chooseColor()
+{
+    console.log(this.value);
+}
 
 
 grid_range.addEventListener('click', gridSelect);
+color.addEventListener('mouseleave', chooseColor);
 // document.addEventListener('mousemove',handleMove);
