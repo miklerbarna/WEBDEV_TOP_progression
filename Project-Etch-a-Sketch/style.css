@@ -1,0 +1,70 @@
+
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+    margin: inherit;
+    padding: inherit;
+}
+
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#panel {
+    padding: 1rem;
+    display: flex;
+    gap: 4rem;
+    background-color: aquamarine;
+}
+
+#controls {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: blanchedalmond;
+}
+
+
+#grid_layout {
+    outline: black solid 3px;
+    display: flex;
+    flex-direction: column;
+    width: 40rem;
+    height: 40rem;
+    padding: 0;
+}
+
+
+.grid_row {
+    display: flex;
+}
+
+.grid_item {
+    margin: 0;
+    padding: 0;
+    outline: black solid 1px;
+}
+
+
+.grid_item:hover {
+    background-color: blue;
+}
+
+.grid_range {
+    padding: 0;
+}
+
+.grid_range_value {
+    font-size: 1rem;
+    background-color: aqua;
+    text-align: center;
+}
