@@ -5,8 +5,9 @@ let player_score = 0;
 
 const buttons = Array.from(document.querySelectorAll(".option"));
 const score = document.querySelector("#score");
+const restart = document.querySelector('#restart');
 
-
+displayScore();
 
 function handleClick(e)
 {
@@ -86,13 +87,27 @@ function displayScore()
 }
 
 
+function handleRestart()
+{
+    player_score = 0;
+    computer_score = 0;
+    displayScore();
+}
+
+
 buttons.forEach(button => button.addEventListener("click", handleClick));
+restart.addEventListener('click', handleRestart)
 
 
 
+
+
+
+
+/* Mouse follow Shadow*/
 const body = document.querySelector('body');
 const container = document.querySelector('#container');
-const walk = 300;
+const walk = 100;
 
 function shadow(e)
 {
@@ -112,8 +127,8 @@ function shadow(e)
   const yWalk = Math.round((y / height * walk) - walk / 2);
 
   container.style.cssText += `box-shadow:
-                ${xWalk}px ${yWalk}px 0 red,
-                ${xWalk - 40}px ${yWalk - 40}px 0 blue
+                ${xWalk}px ${yWalk}px 0.3rem 0.7rem rgba(255, 255, 255, 0.3),
+                0 0 1rem 0.2rem blue;
                 `;
 }
 

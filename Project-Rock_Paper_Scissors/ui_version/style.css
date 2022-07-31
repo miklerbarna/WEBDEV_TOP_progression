@@ -12,7 +12,7 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    background-color: white;
+    background-image: linear-gradient(135deg, red,rgb(188, 30, 30),purple, rgb(125, 19, 125),rgb(32, 32, 182),blue);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,11 +27,13 @@ h1 {
     height: 50%;
     margin: 0;
     padding: 3rem;
-    background-color: yellowgreen;
+    background-color: rgb(73, 69, 69);
+    color:aliceblue;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    border: 3px solid white;
     border-radius: 2rem;
 }
 
@@ -54,10 +56,47 @@ h1 {
     background-color: beige;
     border: 1px solid black;
     border-radius: 0.4rem;
+    font-size: 1.2rem;
+    transition: all .3s;
+}
+
+.option:hover {
+    background-color: rgb(177, 171, 171);
+    border: 3px solid white;
+    box-shadow: 0 0 1rem 0 blue;
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
 #score {
     font-size: 1.5rem;
     font-weight: 600;
     margin-top: 2rem;
+}
+
+
+#restart {
+    width: 8rem;
+    height: 2.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin-top: 1.2rem;
+    padding: 1rem;
+    background-color: beige;
+    border: 1px solid black;
+    border-radius: 0.4rem;
+    font-size: 1.2rem;
+    transition: all .3s;
+}
+
+
+
+#restart:hover {
+    background-color: rgb(177, 171, 171);
+    border: 3px solid white;
+    box-shadow: 0 0 1rem 0 blue;
+    font-size: 1.5rem;
+    font-weight: 600;
 }
