@@ -49,15 +49,9 @@ body {
 }
 
 .grid_item {
-    margin: 0;
-    padding: 0;
-    outline: black solid 1px;
+    
 }
 
-
-.grid_item:hover {
-    background-color: blue;
-}
 
 .grid_range {
     padding: 0;

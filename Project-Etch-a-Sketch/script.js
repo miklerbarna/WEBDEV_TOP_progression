@@ -4,13 +4,13 @@ const grid_range_value = document.querySelector('.grid_range_value');
 const color = document.querySelector('.color');
 let grid_items = [];
 let isDown = false;
+let current_color = '#000000';
 
 populate(10);
 
 
 function clearGrid()
 {
-    console.log(grid_layout.childElementCount);
     while(grid_layout.childElementCount > 0)
     {
         let child = grid_layout.firstChild;
@@ -37,6 +37,12 @@ function populate(n)
     }
 
     grid_items = Array.from(document.querySelectorAll('.grid_item'));
+    grid_items.forEach(item => item.style.cssText += `  background-color: aquamarine;
+                                                        margin: 0;
+                                                        padding: 0;
+                                                        outline: black solid 1px;
+                                                    `);
+    newEvents(grid_items);
 }
 
 
@@ -61,10 +67,30 @@ function handleMove()
 
 function chooseColor()
 {
-    console.log(this.value);
+    current_color =  this.value;
 }
 
 
 grid_range.addEventListener('click', gridSelect);
-color.addEventListener('mouseleave', chooseColor);
+// color.addEventListener('click', chooseColor);
+color.addEventListener('change', chooseColor);
+
+function newEvents(grid_item)
+{
+    grid_items.forEach(item => item.addEventListener('mousemove', (e) => {
+        e.target.style.cssText +=`  background-color:${current_color};
+                                    margin: 0;
+                                    padding: 0;
+                                    outline: black solid 1px;
+                                    `;
+    }));
+
+    grid_items.forEach(item => item.addEventListener('mouseleave', (e) => {
+        e.target.style.cssText +=`  background-color: aquamarine;
+                                    margin: 0;
+                                    padding: 0;
+                                    outline: black solid 1px;
+                                    `;
+    }));
+}
 // document.addEventListener('mousemove',handleMove);
