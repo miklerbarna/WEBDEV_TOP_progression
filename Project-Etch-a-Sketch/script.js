@@ -2,11 +2,15 @@ const grid_layout = document.querySelector('#grid_layout');
 const grid_range = document.querySelector('[type="range"]');
 const grid_range_value = document.querySelector('.grid_range_value');
 const color = document.querySelector('.color');
-let grid_items = [];
+const clear = document.querySelector('#clear');
+const rainbow = document.querySelector('#rainbow');
 let isDown = false;
+let isRainbow = false;
+let grid_items = [];
 let current_color = '#000000';
 
 populate(10);
+grid_range_value.textContent = '10 x 10';
 
 
 function clearGrid()
@@ -37,10 +41,9 @@ function populate(n)
     }
 
     grid_items = Array.from(document.querySelectorAll('.grid_item'));
-    grid_items.forEach(item => item.style.cssText += `  background-color: aquamarine;
+    grid_items.forEach(item => item.style.cssText += `  background-color: white;
                                                         margin: 0;
                                                         padding: 0;
-                                                        outline: black solid 1px;
                                                     `);
     newEvents(grid_items);
 }
@@ -49,21 +52,11 @@ function populate(n)
 
 function gridSelect(e)
 {
-    grid_range_value.textContent = `${this.value}`;
+    grid_range_value.textContent = `${this.value} x ${this.value}`;
     populate(this.value);
 }
 
-function handleMove()
-{
-    if (isDown)
-    {
-        console.log('down');
-    }
-    else
-    {
-        console.log('up');
-    }
-}
+
 
 function chooseColor()
 {
@@ -71,26 +64,47 @@ function chooseColor()
 }
 
 
-grid_range.addEventListener('click', gridSelect);
-// color.addEventListener('click', chooseColor);
-color.addEventListener('change', chooseColor);
 
 function newEvents(grid_item)
 {
     grid_items.forEach(item => item.addEventListener('mousemove', (e) => {
-        e.target.style.cssText +=`  background-color:${current_color};
-                                    margin: 0;
-                                    padding: 0;
-                                    outline: black solid 1px;
-                                    `;
+        if (isDown)
+        {
+            e.target.style.cssText +=`  background-color:${current_color};
+            margin: 0;
+            padding: 0;
+            `;
+            if(isRainbow)
+            {
+                current_color = '#'+Math.floor(Math.random()*16777215).toString(16);
+            }
+        }
     }));
-
+    
     grid_items.forEach(item => item.addEventListener('mouseleave', (e) => {
-        e.target.style.cssText +=`  background-color: aquamarine;
-                                    margin: 0;
-                                    padding: 0;
-                                    outline: black solid 1px;
-                                    `;
+        if (!isDown && e.target.style.backgroundColor === 'white'){
+            e.target.style.cssText +=`  background-color: white;
+            margin: 0;
+            padding: 0;
+            `;
+        }
+    }));
+    
+    grid_items.forEach(item => item.addEventListener('mousedown', () => {
+        (isDown === true) ? isDown = false : isDown = true;
     }));
 }
-// document.addEventListener('mousemove',handleMove);
+
+function click_clear()
+{
+    let grid_item_count = grid_items.length;
+    populate(Math.sqrt(grid_item_count));
+}
+
+
+grid_range.addEventListener('click', gridSelect);
+color.addEventListener('change', chooseColor);
+clear.addEventListener('click', click_clear);
+rainbow.addEventListener('click', () => {
+    (isRainbow === true) ? isRainbow = false : isRainbow = true;
+});

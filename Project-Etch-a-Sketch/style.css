@@ -17,25 +17,32 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    background-color: #395B64;
 }
 
 #panel {
     padding: 1rem;
     display: flex;
     gap: 4rem;
-    background-color: aquamarine;
+    background-color: #A5C9CA;
 }
 
 #controls {
     display: flex;
     flex-direction: column;
-    padding: 1rem;
-    background-color: blanchedalmond;
+    padding: 4rem 1rem;
+}
+
+#controls * {
+    background-color: #2C3333;
+    color: #E7F6F2;
+    padding: 1rem 0rem;
+    margin: 1rem 0rem;
 }
 
 
 #grid_layout {
-    outline: black solid 3px;
+    outline: black solid 1px;
     display: flex;
     flex-direction: column;
     width: 40rem;
@@ -48,21 +55,28 @@ body {
     display: flex;
 }
 
-.grid_item {
-    
-}
-
-
 .grid_range {
     padding: 0;
 }
 
 .grid_range_value {
+    padding: 1rem;
     font-size: 1rem;
-    background-color: aqua;
+    background-color: #2C3333;
+    color: #E7F6F2;
+    font-size: 2rem;
     text-align: center;
 }
 
 .color {
     margin-top: 1rem;
+}
+
+
+#clear {
+    font-size: 1rem;
+}
+
+#rainbow {
+    font-size: 1rem;
 }
