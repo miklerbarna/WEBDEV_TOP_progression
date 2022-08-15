@@ -1,0 +1,31 @@
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container {
+    min-width: 40%;
+    display: flex;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    background-color: bisque;
+    border: 1px solid red;
+}
+
+.container2 {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+}
+
+.svg-circle:hover + .svg-text-group {
+    opacity: 0;
+  }
+
+
