@@ -13,3 +13,41 @@ td, th {
 td {
     text-align: center;
 }
+
+
+
+.t-stuff > thead {
+    background-color: darkcyan;
+}
+
+.t-stuff > tbody {
+    color: red;
+    font-weight: 700;
+}
+
+.t-stuff > tfoot {
+    background-color: cornflowerblue;
+}
+
+.t2 caption{
+    margin-bottom: 10px;
+}
+
+.t2 > thead {
+    background-color: rgb(231, 228, 228);
+    font-weight: 700;
+}
+
+.t2 tbody {
+    font-style: italic;
+}
+
+.t2 > tfoot {
+    background-color: rgb(231, 228, 228);
+    font-weight: 700;
+}
+
+.planets thead {
+    background-color: rgb(231, 228, 228);
+}
+
