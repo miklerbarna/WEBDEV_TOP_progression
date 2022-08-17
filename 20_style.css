@@ -1,0 +1,37 @@
+@font-face {
+    font-family: 'Silkscreen';
+    src: url("Silkscreen-Regular.ttf");
+}
+
+body {
+    font-size: 2rem;
+}
+
+p {
+    line-height: 1.5;
+
+    font-family: 'Silkscreen';
+}
+
+h3 {
+    letter-spacing: 2.4rem;
+}
+
+h4 {
+    text-transform: uppercase;
+}
+
+
+h5 {
+    color: cadetblue;
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    padding: 20px;
+    font-size: 1.3rem;
+    margin: 0;
+    background: white;
+    resize: horizontal;
+}
