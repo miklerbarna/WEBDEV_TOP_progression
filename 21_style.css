@@ -1,0 +1,45 @@
+.container {
+    margin: 2rem;
+    border: 2px solid red;
+    max-width: 40rem;
+    min-height: 40rem;
+
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/background */
+    background: url('ocean1.jpeg') no-repeat center;
+    /* background: url('ocean1.jpeg') repeat-y right; */
+    /*
+    All the properties, best used seperately
+    background-attachment: ;
+    background-clip: ;
+    background-color: ;
+    background-image: ;
+    background-origin: ;
+    background-position: ;
+    background-repeat: ;
+    background-size: ;
+    */
+}
+
+.container2 {
+    margin: 2rem;
+    border: 2px solid blue;
+    background-color: blue;
+    max-width: 20rem;
+    min-height: 20rem;
+
+    border-radius: 10% 30% 50% 70%;
+}
+
+.container3 {
+    margin: 2rem;
+    border: 1px solid black;
+    width: 10rem;
+    height: 5rem;
+    /* overflow: hidden; */
+    /* overflow: auto; */
+    /* overflow: visible; */
+    /* overflow: scroll; */
+    /* overflow: clip; */
+
+
+}
