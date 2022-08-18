@@ -1,7 +1,9 @@
 :root {
+	/* variables have scope which is detemined by the DOM tree. If we want to use the variables all across the site, we declare them in the root */
 	--header: 3rem;
 	--footer: 40px;
-	--main: calc(100vh - calc(var(--header) + var(--footer)));
+	--main: calc(100vh - calc(var(--header) + var(--footer))); /* calc() can mix units and can be nested !! */
+	--warning-color: rgb(186, 23, 31);
 }
 
 body {
@@ -35,4 +37,24 @@ body {
 #footer {
 	height: var(--footer);
 	background: #232323;
+}
+
+.cont {
+	width: 400px;
+	height: 400px;
+	background-color: aliceblue;
+	border: 3px solid var(--warning-color, blue); /* var() accepts a fallback value (these can be nested too) */
+	/* border: 3px solid var(--notreal-color, var(--notreal-again, blue)); */
+	color: black;
+	resize: both;
+	overflow: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.thetext {
+	border: 1px solid black;
+	width: min(100%, 200px); /* if there are not 200px available, it will takes up 100% of its parent */
+	height: min(100%, 200px); /* and max selects the largest available value */
 }
