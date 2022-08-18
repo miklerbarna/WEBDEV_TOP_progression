@@ -1,0 +1,98 @@
+body {
+    height: 500vh;
+}
+
+.parent {
+    background-color: blue;
+    font-size: 2rem;
+    padding: 10px;
+    color: white;
+    font-weight: 700;
+    position: static;
+}
+
+.child {
+    font-weight: 500;
+    color: black;
+    font-size: 1.5rem;
+    padding: 10px;
+    margin: 1rem;
+}
+
+.one {
+    background-color: yellow;
+}
+
+.two {
+    background-color: green;
+    position: relative;
+    left: 3rem;
+    top: 0.5rem;
+}
+
+.three {
+    background-color: red;
+    position: relative;
+    right: 5rem;
+}
+
+.absolute {
+    width: 5rem;
+    height: 5rem;
+    background-color: burlywood;
+    position: absolute;  /* does not interfere with other elements */
+    top: 30rem;
+    left: 80rem;
+    /*there is also right and bottom, to position your element*/
+    display: grid;
+    place-items: center;
+}
+
+
+.fixed {
+    width: 5rem;
+    height: 5rem;
+    background-color: aquamarine;
+    position: fixed;
+    display: grid;
+    top: 70%;
+    right: 50%;
+    place-items: center;
+}
+
+.sticky {
+    width: 30rem;
+    height: 5rem;
+    background-color: darkgray;
+    position: sticky;
+    top: 1rem;
+    left: 20rem;
+    display: grid;
+    place-items: center;
+}
+
+.sticky-long {
+    margin: 2rem 0 0 1rem;
+    width: 4rem;
+    height: 80rem;
+    background-color: gold;
+    padding: 0;
+}
+
+.move {
+    width: 4rem;
+    height: 2rem;
+    margin: 0;
+    background-color: greenyellow;
+    position: sticky ;
+    top: 1rem;
+}
+
+/*
+static and relative does not remove the element from the document flow
+sticky and absolute removes it.
+static is default
+relative: top, bottom, left, right values are relative to the static placement of the element
+absolute: top, bottom, left, right values are relative to the body(not really the body)
+sticky: when it gets to its given top, bottom, left, right values, it sticks there (scrolling)
+*/
