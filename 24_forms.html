@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="24_style.css">
+    <title>Forms</title>
+</head>
+<body>
+    
+    <form action="http://httpbin.org/post" method="post">
+        <label for="first_name_id">First name:</label>
+        <input type="text" id="first_name_id" placeholder="John" name="for_backend_first_name_id">
+        <br>
+        <label for="last_name_id">Last name:</label>
+        <input type="text" id="last_name_id" placeholder="Doe" name="for_backend_last_name_id">
+        <br>
+        <label for="pwd">Password:</label>
+        <input type="password" id="pwd" name="for_backend_pwd" placeholder="Password here">
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" name="for_backend_email" id="email" placeholder="example@email.com">
+        <br>
+        <label for="age">Age:</label>
+        <input type="number" name="for_backend_age" id="age">
+        <br>
+        <label for="date">Time of graduation:</label>
+        <input type="date" name="for_backend_date" id="date">
+        <br>
+        <label for="details">Short Detail:</label>
+        <br>
+        <textarea name="for_backend_details" id="details" cols="30" rows="10" maxlength="50"></textarea>
+
+        <br><br>
+        <label for="car">Cars:</label>
+        <select name="for_backend_car" id="car">
+            <option value="mercedes">Mercedes</option>
+            <option value="tesla" selected>Tesla</option>
+            <option value="volvo">Volvo</option>
+            <option value="bmw">BMW</option>
+            <option value="mini">Mini</option>
+            <option value="ford">Ford</option>
+        </select>
+        <br>
+
+        <label for="clothes">Clothes</label>
+        <select name="for_backend_clothes" id="clothes">
+            <optgroup label="Clothing">
+              <option value="t_shirt">T-Shirts</option>
+              <option value="sweater">Sweaters</option>
+              <option value="coats">Coats</option>
+            </optgroup>
+            <optgroup label="Foot Wear">
+              <option value="sneakers">Sneakers</option>
+              <option value="boots">Boots</option>
+              <option value="sandals">Sandals</option>
+            </optgroup>
+        </select>
+        
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+
+    
+    <div class="JS">
+        <label for="username">What should we call you?</label>
+        <input type="text" name="user_name" id="username">
+        <br>
+        <p class="display"></p>
+        <button type="submit" class="forJS">Submit</button>
+    </div>
+
+    <!-- <br>
+    <a href="23_variables-functions.html">Previous Page</a>
+    <a href="">Next Page</a> -->
+    <script src="24_script.js"></script>
+</body>
+</html>
