@@ -1,0 +1,83 @@
+.grid-container1 {
+    display: grid;
+    grid-template-columns: 75px 75px 75px;
+    grid-template-rows: 75px 75px;
+    gap: 32px;
+}
+  
+.card {
+    background-color: peachpuff;
+    border: 1px solid black;
+}
+
+
+
+.grid-container2 {
+    display: grid;
+    grid-template-columns: 75px 75px 75px;
+    grid-template-rows: 75px 75px;
+    grid-template-areas: 
+                        ". a a"
+                        "b b c"
+                        ;
+    gap: 32px;
+}
+  
+.card1 {
+    grid-area: a;
+    background-color: peachpuff;
+    border: 3px solid orangered;
+}
+
+.card2 {
+    grid-area: b;
+    background-color: peachpuff;
+    border: 3px solid orangered;
+}
+
+.card3 {
+    grid-area: c;
+    background-color: peachpuff;
+    border: 3px solid orangered;
+}
+
+
+.grid-container3{
+    width: 20rem;
+    background-color: beige;
+    display: grid;  /*grid-container3 becomes a grid container.
+    Only the direct children of a parent become grid items */
+    grid-template-columns: 200px 4rem; /* try 4rem 4rem 4rem for 3 rows */
+    grid-template-rows: 4rem 4rem;
+    
+    /*shorthand is: grid-template: 4rem 4rem / 4rem 4rem; */
+
+    gap: 2rem;
+}
+
+
+.grid-container3 > * {
+    border: 1px solid blue;
+}
+
+
+.grid-container4 {
+    width: 20rem;
+    background-color: honeydew;
+    display: grid;
+    grid-template-columns: 50px 50px;
+    grid-template-rows: 100px;
+    /* grid-auto-flow: column;  we can change where new items end up implicitely*/
+    /* grid-auto-columns: 100px; */
+    grid-auto-rows: 50px; /* for the not specified rows */
+    gap: 2rem;
+}
+
+.grid-container4 > * {
+    border: 1px solid rebeccapurple;
+}
+
+
+.grid-container4 .item:nth-child(5) {
+    grid-row-start: 4; /* grid-row-start defines what grid line the element should start on     */
+}
