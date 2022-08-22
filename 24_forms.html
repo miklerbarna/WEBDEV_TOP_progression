@@ -10,20 +10,24 @@
 <body>
     
     <form action="http://httpbin.org/post" method="post">
-        <label for="first_name_id">First name:</label>
-        <input type="text" id="first_name_id" placeholder="John" name="for_backend_first_name_id">
-        <br>
-        <label for="last_name_id">Last name:</label>
-        <input type="text" id="last_name_id" placeholder="Doe" name="for_backend_last_name_id">
+        <!-- Fieldset is for organizing -->
+        <fieldset>
+            <legend>Name:</legend>
+            <label for="first_name_id">First name:</label>
+            <input type="text" id="first_name_id" placeholder="John" name="for_backend_first_name_id" minlength="3">
+            <br>
+            <label for="last_name_id">Last name:</label>
+            <input type="text" id="last_name_id" placeholder="Doe" name="for_backend_last_name_id" minlength="3">
+        </fieldset>
         <br>
         <label for="pwd">Password:</label>
         <input type="password" id="pwd" name="for_backend_pwd" placeholder="Password here">
         <br>
-        <label for="email">Email:</label>
-        <input type="email" name="for_backend_email" id="email" placeholder="example@email.com">
+        <label for="email">Email<sup>*</sup>:</label>
+        <input type="email" name="for_backend_email" id="email" placeholder="example@email.com" required> <!-- required means it must be filled-->
         <br>
         <label for="age">Age:</label>
-        <input type="number" name="for_backend_age" id="age">
+        <input type="number" name="for_backend_age" id="age" min="12" max="110">
         <br>
         <label for="date">Time of graduation:</label>
         <input type="date" name="for_backend_date" id="date">
@@ -57,9 +61,35 @@
               <option value="sandals">Sandals</option>
             </optgroup>
         </select>
+        <br>
+        <!-- Radio elements need to have the same name to work in unison, and a value="" to be passed to the backend -->
         
+        <fieldset>
+            <legend>Gender:</legend>
+            <label for="gender_male">Male:</label>
+            <input type="radio" name="for_backend_gender" id="gender_male" value="male" checked>
+            <label for="gender_female">Female:</label>
+            <input type="radio" name="for_backend_gender" id="gender_female" value="female">
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend>Language:</legend>
+            <label for="lang_eng">English</label>
+            <input type="checkbox" name="for_backend_lang" id="lang_eng" value="english" checked>
+            <label for="lang_ger">German</label>
+            <input type="checkbox" name="for_backend_lang" id="lang_ger" value="german">
+            <label for="lang_fre">French</label>
+            <input type="checkbox" name="for_backend_lang" id="lang_fre" value="french">
+        </fieldset>
+
+
         <br>
         <button type="submit">Submit</button>
+        <!-- <button>Submit</button> works too, the default type of a button is submit -->
+        <button type="reset">Reset</button>
+        <!-- simple button type button for JS purposes -->
+        <button type="button">Look</button> 
     </form>
 
     
