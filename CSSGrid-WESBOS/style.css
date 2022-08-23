@@ -78,3 +78,154 @@ body {
 .six {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 }
+
+
+/*grid template areas*/
+
+.seven {
+    min-height: 20rem;
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-rows: 3frpx 2fr 2fr;
+    grid-template-areas: "sidebar1 content sidebar2"
+                         "sidebar1 content sidebar2"
+                         "footer footer footer";
+}
+
+
+.side1 {
+    grid-area: sidebar1;
+}
+
+.side2 {
+    grid-area: sidebar2;
+}
+
+.lor {
+    grid-area: content;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+
+@media (max-width: 700px) {
+    .seven {
+        background-color: blueviolet;
+        grid-template-areas:"content content content"
+                            "sidebar1 sidebar1 sidebar2"
+                            "footer footer footer";
+    }
+}
+
+/*using given tracklines*/
+@media (min-width: 1200px) {
+    .seven {
+        background-color: cadetblue;
+    }
+    .footer {
+        grid-column: content-start / content-end;
+    }
+
+    .side1 {
+        grid-row: content-start / footer-end;
+    }
+
+    .side2 {
+        grid-row: content-start / footer-end;
+    }
+}
+
+/*give own track line names*/
+.eight {
+    grid-template-columns: [leftside] 1fr [startofcontent] 3fr [endofcontent] 1fr [rightside];
+    grid-template-rows: [topstart] 1fr [middlestart] 1fr [middlepart] 1fr [middleend] 1fr [bottomend];
+}
+
+
+.eight .item:nth-child(2) {
+    background-color: antiquewhite;
+    grid-column: startofcontent / rightside;
+    grid-row: topstart / middleend;
+}
+
+/*grid-auto-flow: dense */
+
+.nine {
+    grid-template-columns: repeat(10, 1fr);
+    grid-auto-flow: dense;
+}
+
+.nine .item:nth-child(7n) {
+    background-color: antiquewhite;
+    grid-column: span 6;
+}
+
+.nine .item:nth-child(8n) {
+    background-color: rebeccapurple;
+    grid-column: span 2;
+}
+
+.nine .item:nth-child(9n) {
+    background-color: tomato;
+    grid-row: span 2;
+}
+
+.nine .item:nth-child(63) {
+    grid-column-end: -1;
+}
+
+
+
+.ten {
+    min-height: 30rem;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    justify-items: center; /*justify items for x axis, stretch is default (there is also center, end, start)*/
+    align-items: center; /* align-items for y axis, stretch is default (there is also center, end, start)*/
+    /* place-items: align-items | justify-items */
+    /* place-items: end start; */
+
+    justify-content: space-around; /* this and align-content are the same as flexbox */
+    align-content: flex-end;
+}
+
+
+.ten .item:nth-child(9) {
+    justify-self: end;
+    align-self: start;
+}
+
+
+/*change order of items*/
+.eleven {
+    grid-template-columns: repeat(10, 1fr);
+}
+
+.logo {
+    grid-column: span 2;
+    min-width: 6rem;
+}
+
+.nav {
+    grid-column: span 8;
+}
+
+.cont {
+    grid-column: span 10;
+}
+
+
+@media (max-width: 700px) {
+    .logo {
+        order: 1;
+    }
+
+    .nav {
+        order: 0;
+    }
+
+    .cont {
+        order: 2;
+    }
+}
