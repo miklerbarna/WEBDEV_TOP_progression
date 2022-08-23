@@ -1,0 +1,80 @@
+
+body {
+    padding: 2rem;
+    background-color: grey;
+}
+
+.container {
+    display: grid;
+    grid-gap: 2rem;
+    padding: 2rem;
+    width: auto;
+    border: 5px solid yellow;
+}
+
+
+.item {
+    background-color: yellow;
+    font-size: 1.7rem;
+    display: grid;
+    place-items: center;
+    font-weight: bold;
+}
+
+.one {
+    grid-template-columns: repeat(3, 1fr); /*size with fr instead of % unit*/
+}
+
+/*how to use fr*/
+.two {
+    grid-template-columns: 1fr 4fr 1fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr 2fr;
+}
+
+.three {
+    grid-template-columns: auto 1fr; /*auto (with fr) fits to the largest content*/
+    /*otherwise it takes up all available space (try changing 1fr to 10rem)*/
+}
+
+/*sizing items:*/
+
+.four {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+
+.item9 {
+    background-color: rebeccapurple;
+    color: whitesmoke;
+    /*(try width: 500px;)*/
+    grid-column: span 2; /*(try span 3)*/
+    grid-row: span 2;
+}
+
+
+
+/* grid-column: span 2 is shorthand to grid-column-start: span 2; grid-column-end: auto */
+/*grid-column-start and grid-column-end values are track numbers (devtools)*/
+/* grid-column: 2 / 5; is another shorthand for more variations*/
+/*width 100% => grid-column: 1 / -1; */
+/*
+.item3 {
+    background-color: blanchedalmond;
+    grid-column-start: 2; 
+    grid-column-end: 5;
+}
+*/
+
+/*auto-fill vs auto-fit*/
+.five {
+    grid-template-columns: repeat(auto-fill, 150px);
+}
+
+.five .item:last-child {
+    grid-column-end : -1;
+}
+
+
+.six {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
