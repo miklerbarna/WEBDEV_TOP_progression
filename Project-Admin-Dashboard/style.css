@@ -1,0 +1,127 @@
+@font-face {
+    font-family: 'Roboto-bold';
+    src: url('fonts/Roboto-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Regular.ttf');
+}
+
+:root {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Roboto';
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+
+.wrapper {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: auto 1fr;
+}
+
+
+.nav {
+    grid-row: 1 / 3;
+    min-height: 100%;
+    background-color: aqua;
+}
+
+.header {
+    padding: 1.4rem;
+    grid-column: 2 / 3  ;
+    background-color: rgba(133, 104, 162, 0.56);
+    display: grid;
+    grid-gap: 15px;
+    grid-template-rows: auto 1fr;
+}
+
+.header .top{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+}
+
+.top .search {
+    width: 100%;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 30px 1fr;
+    align-items: center;
+    justify-content: start;
+}
+
+.header .top #searchbar {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    justify-self: start;
+    width: 60%;
+}
+
+.top .top-left {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    justify-content: end;
+}
+
+.top .top-left p {
+    font-family: 'Roboto-bold';
+    display: inline;
+}
+
+
+[src="human-child.png"] {
+    border: 1px solid black;
+    width: 6rem;
+    border-radius: 50%;
+}
+
+.top [src="human-child.png"] {
+    width: 3rem;
+}
+
+.header .profile {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.bio {
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+[src="human-child.png"] {
+    grid-row: span 2;
+}
+
+
+.profile-left {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: auto auto auto;
+    justify-content: end;
+    place-items: center center;
+}
+
+
+.header .profile p{
+    font-family: 'Roboto-bold';
+    display: inline;
+}
