@@ -18,9 +18,10 @@
 
 body {
     font-family: 'Roboto';
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
     padding: 0;
+    color: #03051E;
 }
 
 
@@ -28,28 +29,59 @@ body {
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: 1fr auto;
 }
 
 
 .nav {
     grid-row: 1 / 3;
     min-height: 100%;
-    background-color: aqua;
+    padding: 1rem;
+    background-color: #EAE1E1;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.nav h2 {
+    display: inline;
+}
+
+.nav-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nav .icons li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.one {
+    margin-bottom: 5rem;
 }
 
 .header {
-    padding: 1.4rem;
+    padding: 1rem;
     grid-column: 2 / 3  ;
-    background-color: rgba(133, 104, 162, 0.56);
+    background-color: #0B5269;
+    color: rgba(234, 225, 225, 0.5);
     display: grid;
-    grid-gap: 15px;
-    grid-template-rows: auto 1fr;
+    grid-gap: 10px;
+    grid-template-rows: 1fr 1fr;
 }
 
 .header .top{
     display: grid;
-    grid-gap: 10px;
     grid-template-columns: 1fr auto;
     align-items: center;
 }
@@ -84,10 +116,17 @@ body {
     display: inline;
 }
 
+button {
+    background-color: #EAE1E1;
+    color: #0B5269;
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: 2px solid #EAE1E1;
+}
 
 [src="human-child.png"] {
     border: 1px solid black;
-    width: 6rem;
+    width: 3rem;
     border-radius: 50%;
 }
 
@@ -97,14 +136,18 @@ body {
 
 .header .profile {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
 }
 
 .bio {
     display: grid;
-    column-gap: 20px;
+    column-gap: 10px;
     grid-template-columns: auto 1fr;
     grid-template-rows: 1fr 1fr;
+}
+
+.bio p {
+    margin: 0;
 }
 
 [src="human-child.png"] {
@@ -124,4 +167,120 @@ body {
 .header .profile p{
     font-family: 'Roboto-bold';
     display: inline;
+}
+
+.content {
+    height: 100%;
+    width: 100%;
+    background: greenyellow;
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+}
+
+.projects {
+    padding: 1.5rem;
+    background-color: #978D58;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: 200px;
+    column-gap: 20px;
+    row-gap: 30px;
+    align-items: start;
+}
+
+.projects h2 {
+    grid-column: 1 / -1;
+    padding: 0;
+    margin: 0;
+}
+
+.project {
+    background-color: #EAE1E1;
+    border-radius: 1rem;
+    border-left: 0.3rem solid rgba(255, 255, 0, 0.5);
+    padding: 0.7rem;
+}
+
+.symbols {
+    padding: 1rem;
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
+}
+
+
+.announcements-trending {
+    background-color: #EAE1E1;
+    display: grid;
+    align-content: start;
+    grid-template-rows: 1fr 1fr;
+}
+
+.announcements {
+    background-color: #EAE1E1;
+    padding: 1.5rem;
+}
+
+
+.anno-header {
+    font-family: 'Roboto-Bold';
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.anno-contents {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    background: white;
+}
+
+.anno-head {
+    font-family: 'Roboto-Bold';
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+.anno-content p{
+    margin: 0;
+}
+
+.trending {
+    background-color: #EAE1E1;
+    padding: 1.5rem;
+}
+
+.tren-header {
+    font-family: 'Roboto-Bold';
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.tren-contents {
+    display: grid;
+    grid-gap: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    background: white;
+}
+
+.tren-content {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    column-gap: 10px;
+    grid-template-areas: 
+                        "profile name"
+                        "profile title";
+}
+
+.tren-content img {
+    grid-area: profile;
+}
+
+.tren-content p {
+    margin: 0;
+}
+
+.tren-content p:nth-child(3) {
+    color: rgba(0, 0, 0, 0.4);
 }
