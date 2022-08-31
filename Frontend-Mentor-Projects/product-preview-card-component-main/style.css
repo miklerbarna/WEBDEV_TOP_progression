@@ -1,0 +1,134 @@
+.attribution { 
+    font-size: 11px; text-align: center; 
+    margin-bottom: 1rem;
+    place-self: end center;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+
+:root {
+    --dcyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --white: hsl(0, 0%, 100%);
+    --verydblue: hsl(212, 21%, 14%);
+    --darkgrayblue: hsl(228, 12%, 48%);
+}
+
+
+body {
+    background-color: var(--cream);
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+
+p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.wrapper {
+    place-self: center center;
+    display: grid;
+    width: 600px;
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+}
+
+.left {
+}
+
+img {
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    height: 100%;
+    width: 100%;
+}
+
+
+.right {
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    background-color: var(--white);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 1rem;
+}
+
+.right .perfume {
+    text-transform: uppercase;
+    color: var(--darkgrayblue);
+}
+
+
+.right .bold {
+    font-family: 'Fraunces', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.description {
+    color: var(--darkgrayblue);
+    margin-bottom: 1rem;
+}
+
+.price {
+    display: grid;
+    row-gap: 1.5rem;
+    grid-template-areas: 
+    "price old"
+    "button button";
+    justify-items: center;
+}
+
+.price-new{
+    font-family: 'Fraunces', serif;
+    grid-area: price;
+    place-self: center start;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--dcyan);
+}
+
+.price-old {
+    font-size: 1rem;
+    grid-area: old;
+    place-self: center start;
+    font-family: 'Fraunces', serif;
+    color: var(--darkgrayblue);
+    text-decoration: line-through;
+}
+
+.right button {
+    display: flex;
+    gap: 0.4rem;
+    grid-area: button;
+    background-color: var(--dcyan);
+    color: var(--white);
+    border-radius: 0.3rem;
+    border: 0;
+    padding: 1rem 6em;
+}
+
+button p {
+    flex: 1 0 auto;
+    font-weight: 700;
+}
+
+button img {
+    width: 70%;
+    height: auto;
+}
+
+button:hover {
+    background-color: var(--verydblue);
+}
+
