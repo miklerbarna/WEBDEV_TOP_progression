@@ -1,0 +1,134 @@
+:root {
+    --cream: hsla(34, 78%, 91%, 60%);
+    --dblue: #16213E;
+    --lighterblue: #0F3460;
+    --purple: hsla(264, 43%, 36%, 60%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    height: 100vh;
+    display: flex;
+    background-color: var(--dblue);
+    letter-spacing: 1px;
+}
+
+.container {
+    background-color: var(--lighterblue);
+    margin: 20px auto auto;
+    width: 600px;
+    padding: 2rem;
+    border: 3px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 1rem;
+    
+}
+
+h1 {
+    color: var(--cream);
+}
+.input {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.input_area {
+    border: none;
+    border-radius: 3px;
+    width: 300px;
+    height: 40px;
+    background-color: var(--lighterblue);
+    border: 3px solid var(--dblue);
+    color: var(--cream);
+    padding: 0.5rem;
+    font-weight: 600;
+    letter-spacing: inherit;
+    transition: all .3s ease;
+}
+
+.input_area:focus, .input_area:hover, .input button:hover {
+    outline: none !important;
+    border-color: var(--cream);
+    transform: translateY(-3px);
+}
+
+.input button {
+    letter-spacing: inherit;
+    background-color: var(--lighterblue);
+    padding: 10px 20px;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 3px;
+    border: 3px solid var(--dblue);
+    color: var(--cream);
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+
+.notes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.note {
+    background-color: var(--dblue);
+    border: 3px solid var(--purple);
+    color: var(--cream);
+    border-radius: 10px;
+    padding: 1rem;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.99s ease;
+    /* cursor: pointer; */
+}
+
+.fade {
+    opacity: 0;
+    transform: translate(-60px,-20px);
+}
+
+
+.highlight {
+    border: 3px solid red;
+}
+
+
+.del_btn {
+    background-color: var(--dblue);
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    border-color: transparent;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.del_btn:hover {
+    border: 2px solid var(--purple);
+}
+
+.del_btn img {
+    display: block;
+}
